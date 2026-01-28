@@ -1,0 +1,12 @@
+.task-item{
+    display: block;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.task-item:hover {
+    box-shadow: 0 0 10px #646cff;
+    cursor: pointer;
+}
