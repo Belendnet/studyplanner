@@ -10,6 +10,7 @@ function App() {
     return (
     <>
         {!state && <components.TaskItem task={{id: '1', title: 'Sample Task', subject: 'Testing', status:  "open"}} onDelete={() => handleDelete()}/>}
+        <components.TaskForm />
     </>
   )
 }
