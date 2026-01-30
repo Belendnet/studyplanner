@@ -1,6 +1,12 @@
 import './TaskForm.css'
 
-export function TaskForm() {
+interface TaskForm {
+    onSubmit: () => void;
+    onCancel: () => void;
+}
+
+export function TaskForm({onSubmit, onCancel}: TaskForm) {
+
     return (
         <form className="task-form">
             <div className="form-group">
@@ -23,7 +29,8 @@ export function TaskForm() {
                     <option value="completed">Completed</option>
                 </select>
             </div>
-            <button type="submit">Add Task</button>
+            <button type="submit" onClick={onSubmit}>Add Task</button>
+            <button type="button" onClick={onCancel}>Cancel</button>
         </form>
     )
 }
